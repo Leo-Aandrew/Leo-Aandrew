@@ -3,7 +3,7 @@ import requests
 
 def fetch_weather():
     city = city_entry.get()
-    api_key = '1bd54b904e7cf5f16db1a2e4d8c8a08b'  # Replace 'YOUR_API_KEY' with your actual OpenWeatherMap API key
+    api_key = '1bd54b904e7cf5f16db1a2e4d8c8a08b' 
     url = f'http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric'
     response = requests.get(url)
     data = response.json()
@@ -16,7 +16,7 @@ def fetch_weather():
     else:
         weather_label.config(text='City not found')
 
-# GUI setup
+
 root = tk.Tk()
 root.title('Weather App')
 
